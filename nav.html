@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Portfolio</title>
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+/* ------------ NAVBAR TRANSPARENT ------------ */
+.navbar {
+    background: transparent !important;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* ------------ ALL SECTIONS FULL SCREEN ------------ */
+section {
+    min-height: 100vh;
+    padding-top: 100px;  /* Space for fixed navbar */
+    font-weight: bold;
+}
+
+/* ------------ HOME SECTION IMAGE FIX ------------ */
+#home {
+    background: url("image/my3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ------------ TEXT BOLD ------------ */
+h1, h2, h3, h4, p, a, label {
+    font-weight: bold !important;
+}
+
+/* ------------ SKILL CARDS ------------ */
+.skill-card {
+    background: rgba(255,255,255,0.05);
+    border: 2px solid #00eaff;
+    padding: 25px 15px;
+    border-radius: 12px;
+    transition: 0.35s;
+    box-shadow: 0 0 10px rgba(0,234,255,0.3);
+}
+
+.skill-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #00eaff;
+}
+
+/* ------------ EDUCATION CARDS ------------ */
+.edu-card {
+    background: #1B1C23;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.35s;
+}
+
+.edu-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.edu-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Button */
+.custom-btn {
+    background: #00eaff;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.custom-btn:hover {
+    background: #0088aa;
+    box-shadow: 0 0 15px #00eaff;
+    transform: scale(1.05);
+}
+
+/* Glow text */
+.glow-text {
+    color: #00eaff;
+    text-shadow: 0 0 15px #00eaff;
+}
+
+/* ------------ HOBBY CARDS ------------ */
+.hobby-card {
+    background: rgba(255,255,255,0.05);
+    border: 2px solid #00eaff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    transition: 0.35s;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,234,255,0.3);
+}
+
+.hobby-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 25px #00eaff;
+    background: rgba(0,234,255,0.08);
+}
+
+.hobby-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #00eaff;
+    text-shadow: 0 0 15px #00eaff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-light px-4">
+  <div class="container-fluid">
+    <a class="navbar-brand fs-2 fw-bold text-white" href="#"><span style="color:skyblue;">Mujeebullah Khan</span></a>
+
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 text-center">
+        <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#hobbies">Hobbies</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ================= HOME SECTION ================= -->
+<section id="home">
+  <div>
+    <h1 class="glow-text">Welcome to My Portfolio</h1>
+    <p>I am a Web Developer & Designer</p>
+  </div>
+</section>
+
+
+<!-- ================= ABOUT SECTION ================= -->
+<section id="about" class="text-white">
+  <div class="container">
+
+    <div class="text-center mb-4">
+      <h1 data-aos="fade-up">About <span class="text-primary">Me</span></h1>
+      <hr class="w-25 m-auto">
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-6" data-aos="zoom-in">
+        <h2>Want to know more <span class="text-primary">about me?</span></h2>
+
+        <p>
+          I am a motivated learner with a strong interest in developing new skills. I enjoy working on projects,
+          improving myself, and contributing positively wherever I go.
+        </p>
+         <ul class="list-unstyled mt-3">
+          <li><strong>Name:</strong> Mujeebullah Khan</li>
+          <li><strong>Email:</strong> mujibkhan6407@gmail.com</li>
+          <li><strong>Location:</strong> Ajmer,Rajasthan</li>
+        </ul>
+
+
+        
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <img src="image\my2.jpg" class="img-fluid img-thumbnail" alt="My Photo">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= SKILLS SECTION ================= -->
+<section id="skills" class=" text-light">
+  <div class="container">
+
+    <h2 class="text-center mb-4 glow-text">My Skills</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-3 text-center">
+        <div class="skill-card">
+          <img src="image\html.jpeg" class="skill-img" alt="HTML" height="200px" width="200px">
+          <h4>HTML</h4>
+        </div>
+      </div>
+
+      <div class="col-md-3 text-center">
+        <div class="skill-card">
+          <img src="image\css.png" class="skill-img" alt="CSS"height="200px" width="200px">
+          <h4>CSS</h4>
+        </div>
+      </div>
+
+      <div class="col-md-3 text-center">
+        <div class="skill-card">
+          <img src="image\boot.jpeg" class="skill-img" alt="Bootstrap"height="200px" width="200px">
+          <h4>Bootstrap</h4>
+        </div>
+      </div>
+
+      <div class="col-md-3 text-center">
+        <div class="skill-card">
+          <img src="image\c.jpeg" class="skill-img" alt="C Language"height="200px" width="200px">
+          <h4>C Language</h4>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= HOBBIES SECTION ================= -->
+<section id="hobbies" class="text-white ">
+  <div class="container">
+
+    <h2 class="text-center mb-4 glow-text">My Hobbies</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="hobby-card">
+          <div class="hobby-icon">🎧</div>
+          <h4>Listening Music</h4>
+          <p>I love listening to motivational and relaxing music.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="hobby-card">
+          <div class="hobby-icon">📚</div>
+          <h4>Learning New Skills</h4>
+          <p>I enjoy exploring new technologies and improving myself.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="hobby-card">
+          <div class="hobby-icon">🎬</div>
+          <h4>Watching Videos</h4>
+          <p>I watch motivational and creative content regularly.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= EDUCATION SECTION ================= -->
+<section id="education" class="text-white">
+  <div class="container">
+
+    <h2 class="text-center mb-5">Education</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="edu-card">
+          <img src="image\star.jpeg" class="edu-img" alt="" style="height: 80%;width: 100%;">
+          <div class="p-3">
+            <h4>Graduation</h4>
+            <p>Star Infotech College (Ajmer)</p>
+            <span class="badge bg-primary">Present</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="edu-card">
+          <img src="image\kms.jpg" class="edu-img" alt="" style="height: 80%;width: 100%;">
+          <div class="p-3">
+            <h4>Senior Secondary (12th)</h4>
+            <p>KHWAJA MODEL SCHOOL,AJMER</p>
+            <span class="badge bg-primary">2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="edu-card">
+          <img src="image\kms.jpg" class="edu-img" alt=""style="height: 80%;width: 100%;">
+          <div class="p-3">
+            <h4>Secondary (10th)</h4>
+            <p>KHWAJA MODEL SCHOOL,AJMER</p>
+            <span class="badge bg-primary">2023</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= CONTACT SECTION ================= -->
+<section id="contact" class="text-white">
+  <div class="container">
+
+    <div class="text-center mb-4">
+      <h1>Feel Free <span class="text-primary">to Connect</span></h1>
+      <hr class="w-25 m-auto">
+    </div>
+
+    <form class="row g-3">
+
+      <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control">
+      </div>
+
+      <div class="col-12">
+        <label class="form-label">Address</label>
+        <input type="text" class="form-control" placeholder="1234 Main St">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">City</label>
+        <input type="text" class="form-control">
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">State</label>
+        <select class="form-select">
+          <option selected>Select...</option>
+          <option>Rajasthan</option>
+          <option>Delhi</option>
+        </select>
+      </div>
+
+      <div class="col-md-2">
+        <label class="form-label">Zip</label>
+        <input type="text" class="form-control">
+      </div>
+
+      <div class="col-12">
+        <button class="btn btn-primary">Submit</button>
+      </div>
+
+    </form>
+
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<div class="container-fluid bg-primary text-white p-2 text-center fs-4">
+  Developed by Mujeebullah Khan
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+</body>
+</html>
